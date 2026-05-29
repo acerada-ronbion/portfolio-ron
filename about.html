@@ -23,7 +23,6 @@
     </nav>
 
     <main>
-        <!-- ========== BIO + QUICK STATS (enhanced with resume data) ========= -->
         <section class="section reveal-on-scroll">
             <div class="section-header">
                 <h2><span class="accent-gradient">👨‍💻 About Me</span></h2>
@@ -33,7 +32,6 @@
                 <div class="bio-text glass-card">
                     <p><strong>Ronbion D. Acerada</strong> — Computer Engineering graduate (May 2026) with hands‑on expertise in embedded systems, industrial automation, and AI‑driven robotics. My engineering philosophy bridges low‑level hardware control and intelligent software, turning complex logic into reliable real‑world solutions. During my OJT at the <strong>Energy Regulatory Commission (ERC)</strong>, I streamlined IT workflows, configured critical systems, and developed Python automation scripts that reduced incident resolution time by 25%. I thrive at the intersection of IIoT, edge AI, and PCB design — always aiming to build technology that is both powerful and purposeful.</p>
                     <p style="margin-top: 1rem;">Currently seeking opportunities in embedded engineering, robotics, or technical consultancy where I can contribute to Industry 4.0 innovations. Fluent in English and Filipino, and certified in occupational safety (BOSH SO2) and cloud CI/CD methodologies.</p>
-                    <!-- SINGLE CONTACT BLOCK — no duplication, only this instance -->
                     <div class="bio-contact" style="display:flex; gap:1rem; margin-top:1.8rem;">
                         <a href="mailto:ronbion.11@gmail.com" class="btn outline"><i class="fas fa-envelope"></i> Email</a>
                         <a href="https://github.com/acerada-ronbion" class="btn outline" target="_blank"><i class="fab fa-github"></i> GitHub</a>
@@ -53,10 +51,8 @@
             </div>
         </section>
 
-        <!-- ========== EDUCATION + TECHNICAL SKILLS (from resume.pdf) ========= -->
         <section class="section reveal-on-scroll">
             <div class="grid two-col" style="gap:2rem;">
-                <!-- Education card -->
                 <div class="glass-card">
                     <i class="fas fa-graduation-cap card-icon"></i>
                     <h3>📖 Education & Credentials</h3>
@@ -73,7 +69,6 @@
                         ▪ ERC On‑the‑Job Training (260 hours · Level 1 Support)</p>
                     </div>
                 </div>
-                <!-- Technical Skills card (sourced from resume) -->
                 <div class="glass-card">
                     <i class="fas fa-microchip card-icon"></i>
                     <h3>🛠️ Technical Arsenal</h3>
@@ -97,7 +92,6 @@
             </div>
         </section>
 
-        <!-- ========== CERTIFICATIONS & TRAININGS (dynamic from cert images) ========= -->
         <section class="section reveal-on-scroll">
             <div class="section-header">
                 <h2><span class="accent-gradient">📜 Certificates & Specialized Training</span></h2>
@@ -108,7 +102,6 @@
         </section>
     </main>
 
-    <!-- MODAL FOR CERTIFICATE PREVIEW (identical to index style, but self-contained) -->
     <div id="aboutCertModal" class="modal-overlay">
         <div class="cert-modal-container">
             <div class="cert-modal-header">
@@ -129,42 +122,13 @@
     <script src="script.js"></script>
     <script>
         (function() {
-            // ------------------------------------------------------------------
-            // CERTIFICATES DATA (consistent with index.html & actual cert images)
-            // ------------------------------------------------------------------
             const certs = [
-                {
-                    img: "cert1.jpg",
-                    title: "On‑the‑Job Training (260 hrs) – ERC",
-                    desc: "Energy Regulatory Commission · System Configuration & Level 1 Support · Nov 2025 – Mar 2026",
-                    fullDesc: "Completed 260 hours of technical OJT at ERC: ticketing system management, hardware/software deployment, automated Python reporting scripts, and ISO-aligned documentation. Certificate issued March 25, 2026."
-                },
-                {
-                    img: "cert2.jpg",
-                    title: "Chinese Frontier Digital Intelligence",
-                    desc: "AI Data Labeling & Annotation Techniques · Dec 2025",
-                    fullDesc: "SEAMEO Regional Centre for Technical Education Development lecture: advanced data labeling strategies for computer vision models and AI pipelines."
-                },
-                {
-                    img: "cert3.jpg",
-                    title: "BOSH Safety Officer II",
-                    desc: "40‑hour Basic Occupational Safety & Health + Trainers Training",
-                    fullDesc: "DOLE-accredited training (Serendipity MPC). Covers hazard identification, emergency response, and OSH regulations — qualified as Safety Officer II."
-                },
-                {
-                    img: "cert4.jpg",
-                    title: "CI/CD Pipelines on AWS Workshop",
-                    desc: "Building microservices deployment pipelines · Nov 2025",
-                    fullDesc: "Hands-on workshop by Shailendra Chauhan: AWS CodePipeline, CodeBuild, CodeDeploy, and infrastructure automation for containerized microservices."
-                },
-                {
-                    img: "cert5.jpg",
-                    title: "ICpEP‑NCR Webinar Series",
-                    desc: "Power BI: Exploring Data Without Coding · Aug 2025",
-                    fullDesc: "Institute of Computer Engineers of the Philippines – NCR region. Data visualization, DAX basics, and dashboard creation using Power BI."
-                }
+                { img: "cert1.jpg", title: "On‑the‑Job Training (260 hrs) – ERC", desc: "Energy Regulatory Commission · System Configuration & Level 1 Support · Nov 2025 – Mar 2026", fullDesc: "Completed 260 hours of technical OJT at ERC: ticketing system management, hardware/software deployment, automated Python reporting scripts, and ISO-aligned documentation. Certificate issued March 25, 2026." },
+                { img: "cert2.jpg", title: "Chinese Frontier Digital Intelligence", desc: "AI Data Labeling & Annotation Techniques · Dec 2025", fullDesc: "SEAMEO Regional Centre for Technical Education Development lecture: advanced data labeling strategies for computer vision models and AI pipelines." },
+                { img: "cert3.jpg", title: "BOSH Safety Officer II", desc: "40‑hour Basic Occupational Safety & Health + Trainers Training", fullDesc: "DOLE-accredited training (Serendipity MPC). Covers hazard identification, emergency response, and OSH regulations — qualified as Safety Officer II." },
+                { img: "cert4.jpg", title: "CI/CD Pipelines on AWS Workshop", desc: "Building microservices deployment pipelines · Nov 2025", fullDesc: "Hands-on workshop by Shailendra Chauhan: AWS CodePipeline, CodeBuild, CodeDeploy, and infrastructure automation for containerized microservices." },
+                { img: "cert5.jpg", title: "ICpEP‑NCR Webinar Series", desc: "Power BI: Exploring Data Without Coding · Aug 2025", fullDesc: "Institute of Computer Engineers of the Philippines – NCR region. Data visualization, DAX basics, and dashboard creation using Power BI." }
             ];
-
             const container = document.getElementById('aboutCertGrid');
             if (container) {
                 certs.forEach((cert, idx) => {
@@ -179,22 +143,17 @@
                     `;
                     container.appendChild(card);
                 });
-
-                // ----- Modal logic for certificates (no duplication, clean) -----
                 const modal = document.getElementById('aboutCertModal');
                 const modalImg = document.getElementById('aboutCertModalImage');
                 const modalTitle = document.getElementById('aboutCertModalTitle');
                 const modalDesc = document.getElementById('aboutCertModalDesc');
                 const closeBtn = document.getElementById('closeAboutModal');
-
                 function openModal(cert) {
                     modalImg.src = cert.img;
                     modalTitle.innerText = cert.title;
                     modalDesc.innerText = cert.fullDesc || cert.desc;
                     modal.style.display = 'flex';
                 }
-
-                // attach event listeners to dynamically created buttons
                 document.querySelectorAll('.view-about-cert').forEach(btn => {
                     btn.addEventListener('click', (e) => {
                         e.stopPropagation();
@@ -202,21 +161,10 @@
                         if (!isNaN(idx) && certs[idx]) openModal(certs[idx]);
                     });
                 });
-
-                // close modal events
-                if (closeBtn) {
-                    closeBtn.onclick = () => modal.style.display = 'none';
-                }
-                window.onclick = (e) => {
-                    if (e.target === modal) modal.style.display = 'none';
-                };
+                if (closeBtn) closeBtn.onclick = () => modal.style.display = 'none';
+                window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
             }
-
-            // Additional resume-linked improvement: Minor style & sync with existing interactive cursor (already in script.js)
-            // ensure that the "duplicate contact" is resolved: only one contact block exists (inside bio-text)
-            // also enrich stats with real info
         })();
     </script>
-    <!-- ensure any residual empty <p> from old about is gone, and 2x contact removed -->
 </body>
 </html>
