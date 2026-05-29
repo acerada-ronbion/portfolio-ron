@@ -52,7 +52,7 @@
                 <div class="carousel-track" id="carouselTrack">
                     <div class="horiz-card"><div class="horiz-img"><i class="fas fa-robot"></i></div><h3>Robotic Dispensing System</h3><p>AI vision + Raspberry Pi, 80% accuracy</p><div class="tech-stack"><span>Python</span><span>C++</span></div></div>
                     <div class="horiz-card"><div class="horiz-img"><i class="fas fa-microchip"></i></div><h3>Arduino Expansion Shield</h3><p>Custom 2-layer PCB, Proteus design</p><div class="tech-stack"><span>Proteus</span><span>Embedded C</span></div></div>
-                    <div class="horiz-card"><div class="horiz-img"><i class="fas fa-file-alt"></i></div><h3>ERC Tech Documentation</h3><p>ISO compliant manuals,</p><div class="tech-stack"><span>ticketing System</span><span>Set-up and Configuration</span></div></div>
+                    <div class="horiz-card"><div class="horiz-img"><i class="fas fa-file-alt"></i></div><h3>ERC Tech Documentation</h3><p>ISO compliant manuals, ticketing System, Setup & Configuration</p><div class="tech-stack"><span>Documentation</span><span>ITSM</span></div></div>
                     <div class="horiz-card"><div class="horiz-img"><i class="fas fa-chart-line"></i></div><h3>Predictive Maintenance AI</h3><p>IIoT edge analytics (in progress)</p><div class="tech-stack"><span>TinyML</span><span>ESP32</span></div></div>
                     <div class="horiz-card"><div class="horiz-img"><i class="fas fa-brain"></i></div><h3>Computer Vision Sorting</h3><p>HuskyLens real-time detection</p><div class="tech-stack"><span>AI</span><span>Raspberry Pi</span></div></div>
                 </div>
@@ -77,22 +77,17 @@
         </div>
     </div>
 
-    <footer><p>© 2025 Ronbion D. Acerada · <a href="mailto:ronbion.11@gmail.com">ronbion.11@gmail.com</a> · <i class=""></i></p></footer>
+    <footer><p>© 2025 Ronbion D. Acerada · <a href="mailto:ronbion.11@gmail.com">ronbion.11@gmail.com</a> · <i class="fas fa-microchip"></i> Engineer the future</p></footer>
     <script src="script.js"></script>
     <script>
-        // ============================================================
-        // REPLACE THESE FILENAMES WITH YOUR ACTUAL CERTIFICATE IMAGES
-        // Place the images in the same folder as index.html
-        // ============================================================
+        // ========== CERTIFICATE DATA (5 images) ==========
         const certs = [
             {img:"cert1.jpg", title:"On the Job Training", desc:"260-hours Energy Regulatory Commission [ERC] (2025-2026)"},
             {img:"cert2.jpg", title:"Chinese Frontier Digital Intelligence", desc:"Data Analytics & AI Labeling (2024)"},
             {img:"cert3.jpg", title:"BOSH Safety Officer II", desc:"40-hour Basic Occupational Safety & Health (2024)"},
-            {img:"cert4.jpg", title:"ScholarHAt Workshop", desc:"Building CI/CD Pipelines for Micro Services on AWS (2025)"},
-            {img:"cert5.jpg", title:"ICpEP-NCR Webinar Series", desc:"Power BI: exploring Data Without Coding (2025)"}
+            {img:"cert4.jpg", title:"ScholarHAt Workshop", desc:"Building CI/CD Pipelines for Microservices on AWS (2025)"},
+            {img:"cert5.jpg", title:"ICpEP-NCR Webinar Series", desc:"Power BI: Exploring Data Without Coding (2025)"}
         ];
-        // ============================================================
-        
         const container = document.getElementById('certContainer');
         certs.forEach(c => {
             container.innerHTML += `<div class="glass-card cert-card"><img src="${c.img}" alt="cert"><h3>${c.title}</h3><p>${c.desc}</p><button class="btn primary small view-cert"><i class="fas fa-eye"></i> View</button></div>`;
