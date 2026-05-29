@@ -3,28 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Ronbion Acerada</title>
+    <title>About | Ronbion Acerada — Engineer & Innovator</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav class="glass-nav"><div class="nav-container"><a href="index.html" class="logo">RA<span class="dot">.</span></a><div class="nav-links"><a href="index.html">Home</a><a href="gallery.html">Project</a><a href="experience.html">Work</a><a href="documents.html">Resume</a><a href="about.html">Bio</a></div></div></nav>
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">RA<span class="dot">.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Project</a>
+                <a href="experience.html">Work</a>
+                <a href="documents.html">Resume</a>
+                <a href="about.html">Bio</a>
+            </div>
+        </div>
+    </nav>
+
     <main>
+        <!-- ========== BIO + QUICK STATS (enhanced with resume data) ========= -->
         <section class="section reveal-on-scroll">
-            <div class="section-header"><h2><span class="accent-gradient">👨‍💻 About Me</span></h2><div class="header-line"></div></div>
+            <div class="section-header">
+                <h2><span class="accent-gradient">👨‍💻 About Me</span></h2>
+                <div class="header-line"></div>
+            </div>
             <div class="bio-grid" style="display:grid; grid-template-columns:2fr 1fr; gap:2rem;">
                 <div class="bio-text glass-card">
-                    <p>I am a Computer Engineering graduate with a strong passion for developing intelligent systems that bridge the gap between hardware and software. My technical focus centers on embedded systems, AI-driven automation, and Industrial IoT (IIoT)—areas where I love turning complex logic into real-world solutions.</p>
-                    <p></p>
-                    <p></p>
-                    <div class="bio-contact" style="display:flex; gap:1rem; margin-top:1.5rem;"><a href="mailto:ronbion.11@gmail.com" class="btn outline"><i class="fas fa-envelope"></i> Email</a><a href="https://github.com/acerada-ronbion" class="btn outline"><i class="fab fa-github"></i> GitHub</a><a href="https://www.linkedin.com/in/acerada-ronbion" class="btn outline"><i class="fab fa-linkedin"></i> LinkedIn</a></div>
+                    <p><strong>Ronbion D. Acerada</strong> — Computer Engineering graduate (May 2026) with hands‑on expertise in embedded systems, industrial automation, and AI‑driven robotics. My engineering philosophy bridges low‑level hardware control and intelligent software, turning complex logic into reliable real‑world solutions. During my OJT at the <strong>Energy Regulatory Commission (ERC)</strong>, I streamlined IT workflows, configured critical systems, and developed Python automation scripts that reduced incident resolution time by 25%. I thrive at the intersection of IIoT, edge AI, and PCB design — always aiming to build technology that is both powerful and purposeful.</p>
+                    <p style="margin-top: 1rem;">Currently seeking opportunities in embedded engineering, robotics, or technical consultancy where I can contribute to Industry 4.0 innovations. Fluent in English and Filipino, and certified in occupational safety (BOSH SO2) and cloud CI/CD methodologies.</p>
+                    <!-- SINGLE CONTACT BLOCK — no duplication, only this instance -->
+                    <div class="bio-contact" style="display:flex; gap:1rem; margin-top:1.8rem;">
+                        <a href="mailto:ronbion.11@gmail.com" class="btn outline"><i class="fas fa-envelope"></i> Email</a>
+                        <a href="https://github.com/acerada-ronbion" class="btn outline" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/acerada-ronbion" class="btn outline" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    </div>
                 </div>
-                <div class="bio-stats glass-card"><h3><i class="fas fa-chart-line"></i> Quick Stats</h3><ul style="list-style:none;"><li><span>🎓</span> Computer Engineering Graduate</li><li><span>⚙️</span></li><li><span>📜</span></li><li><span>🤝</span></li></ul></div>
+                <div class="bio-stats glass-card">
+                    <h3><i class="fas fa-chart-line"></i> Quick Stats</h3>
+                    <ul style="list-style:none; margin-top:1rem;">
+                        <li><span>🎓</span> BSCpE · Bestlink College (2026)</li>
+                        <li><span>⚙️</span> 260+ hrs OJT @ ERC (Sys. Config & Support)</li>
+                        <li><span>📜</span> 6+ Professional Certifications (BOSH, AWS, AI, IIoT)</li>
+                        <li><span>🤝</span> Open for Embedded / Robotics roles</li>
+                        <li><span>🧠</span> Tech Stack: Python, C++, ESP32, Raspberry Pi, Proteus</li>
+                    </ul>
+                </div>
             </div>
         </section>
+
+        <!-- ========== EDUCATION + TECHNICAL SKILLS (from resume.pdf) ========= -->
+        <section class="section reveal-on-scroll">
+            <div class="grid two-col" style="gap:2rem;">
+                <!-- Education card -->
+                <div class="glass-card">
+                    <i class="fas fa-graduation-cap card-icon"></i>
+                    <h3>📖 Education & Credentials</h3>
+                    <div style="margin-top: 0.8rem;">
+                        <p><strong>Bachelor of Science in Computer Engineering</strong><br>Bestlink College of the Philippines, Novaliches · 2022 – May 2026</p>
+                        <p style="font-size:0.85rem; color:var(--accent);">✓ Degree conferred: May 6, 2026 (Graduation certification)</p>
+                        <hr style="margin: 1rem 0; border-color: var(--glass-border);">
+                        <p><strong>🔧 Core focus:</strong> Robotics, Embedded AI, Industrial IoT, PCB prototyping, and real-time system optimization.</p>
+                        <p><strong>🏅 Certifications highlight:</strong><br>
+                        ▪ BOSH Safety Officer II (40hrs + Training of Trainers)<br>
+                        ▪ CI/CD Pipelines on AWS – ScholarHAt Workshop<br>
+                        ▪ Chinese Frontier Digital Intelligence: AI Data Labeling<br>
+                        ▪ ICpEP-NCR: Power BI & Data Analytics<br>
+                        ▪ ERC On‑the‑Job Training (260 hours · Level 1 Support)</p>
+                    </div>
+                </div>
+                <!-- Technical Skills card (sourced from resume) -->
+                <div class="glass-card">
+                    <i class="fas fa-microchip card-icon"></i>
+                    <h3>🛠️ Technical Arsenal</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1rem 0;">
+                        <span class="tech-stack"><span>Python / C++</span></span>
+                        <span class="tech-stack"><span>Embedded C</span></span>
+                        <span class="tech-stack"><span>Arduino IDE</span></span>
+                        <span class="tech-stack"><span>Raspberry Pi</span></span>
+                        <span class="tech-stack"><span>ESP32</span></span>
+                        <span class="tech-stack"><span>HuskyLens AI</span></span>
+                        <span class="tech-stack"><span>LiDAR Integration</span></span>
+                        <span class="tech-stack"><span>Proteus PCB</span></span>
+                        <span class="tech-stack"><span>Circuit io</span></span>
+                        <span class="tech-stack"><span>Blender (3D sim)</span></span>
+                        <span class="tech-stack"><span>SQL / Git</span></span>
+                        <span class="tech-stack"><span>CustomTkinter</span></span>
+                        <span class="tech-stack"><span>ROS basics</span></span>
+                    </div>
+                    <p style="margin-top: 0.5rem;"><i class="fas fa-wifi"></i> <strong>IoT & Networking:</strong> WiFi/BT integration, sensor fusion (LiDAR, ultrasonic), troubleshooting, documentation (SLA/ISO).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CERTIFICATIONS & TRAININGS (dynamic from cert images) ========= -->
+        <section class="section reveal-on-scroll">
+            <div class="section-header">
+                <h2><span class="accent-gradient">📜 Certificates & Specialized Training</span></h2>
+                <div class="header-line"></div>
+                <p class="section-subtitle">Industry‑recognized credentials — from OJT excellence to AI/Cloud workshops</p>
+            </div>
+            <div class="grid three-col" id="aboutCertGrid"></div>
+        </section>
     </main>
-    <footer><p>© 2025 Ronbion D. Acerada · <a href="mailto:ronbion.11@gmail.com">ronbion.11@gmail.com</a></p></footer>
+
+    <!-- MODAL FOR CERTIFICATE PREVIEW (identical to index style, but self-contained) -->
+    <div id="aboutCertModal" class="modal-overlay">
+        <div class="cert-modal-container">
+            <div class="cert-modal-header">
+                <h3 id="aboutCertModalTitle">Certificate</h3>
+                <span class="close-modal" id="closeAboutModal">&times;</span>
+            </div>
+            <div class="cert-modal-body">
+                <img id="aboutCertModalImage" src="" alt="certificate preview">
+                <p id="aboutCertModalDesc" style="margin-top:1rem; color:var(--text-secondary);"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Ronbion D. Acerada · <a href="mailto:ronbion.11@gmail.com">ronbion.11@gmail.com</a> · <i class="fas fa-robot"></i> Engineer the future</p>
+    </footer>
+
     <script src="script.js"></script>
+    <script>
+        (function() {
+            // ------------------------------------------------------------------
+            // CERTIFICATES DATA (consistent with index.html & actual cert images)
+            // ------------------------------------------------------------------
+            const certs = [
+                {
+                    img: "cert1.jpg",
+                    title: "On‑the‑Job Training (260 hrs) – ERC",
+                    desc: "Energy Regulatory Commission · System Configuration & Level 1 Support · Nov 2025 – Mar 2026",
+                    fullDesc: "Completed 260 hours of technical OJT at ERC: ticketing system management, hardware/software deployment, automated Python reporting scripts, and ISO-aligned documentation. Certificate issued March 25, 2026."
+                },
+                {
+                    img: "cert2.jpg",
+                    title: "Chinese Frontier Digital Intelligence",
+                    desc: "AI Data Labeling & Annotation Techniques · Dec 2025",
+                    fullDesc: "SEAMEO Regional Centre for Technical Education Development lecture: advanced data labeling strategies for computer vision models and AI pipelines."
+                },
+                {
+                    img: "cert3.jpg",
+                    title: "BOSH Safety Officer II",
+                    desc: "40‑hour Basic Occupational Safety & Health + Trainers Training",
+                    fullDesc: "DOLE-accredited training (Serendipity MPC). Covers hazard identification, emergency response, and OSH regulations — qualified as Safety Officer II."
+                },
+                {
+                    img: "cert4.jpg",
+                    title: "CI/CD Pipelines on AWS Workshop",
+                    desc: "Building microservices deployment pipelines · Nov 2025",
+                    fullDesc: "Hands-on workshop by Shailendra Chauhan: AWS CodePipeline, CodeBuild, CodeDeploy, and infrastructure automation for containerized microservices."
+                },
+                {
+                    img: "cert5.jpg",
+                    title: "ICpEP‑NCR Webinar Series",
+                    desc: "Power BI: Exploring Data Without Coding · Aug 2025",
+                    fullDesc: "Institute of Computer Engineers of the Philippines – NCR region. Data visualization, DAX basics, and dashboard creation using Power BI."
+                }
+            ];
+
+            const container = document.getElementById('aboutCertGrid');
+            if (container) {
+                certs.forEach((cert, idx) => {
+                    const card = document.createElement('div');
+                    card.className = 'glass-card cert-card';
+                    card.style.cursor = 'pointer';
+                    card.innerHTML = `
+                        <img src="${cert.img}" alt="${cert.title}" loading="lazy">
+                        <h3>${cert.title}</h3>
+                        <p>${cert.desc}</p>
+                        <button class="btn primary small view-about-cert" data-idx="${idx}"><i class="fas fa-eye"></i> View Certificate</button>
+                    `;
+                    container.appendChild(card);
+                });
+
+                // ----- Modal logic for certificates (no duplication, clean) -----
+                const modal = document.getElementById('aboutCertModal');
+                const modalImg = document.getElementById('aboutCertModalImage');
+                const modalTitle = document.getElementById('aboutCertModalTitle');
+                const modalDesc = document.getElementById('aboutCertModalDesc');
+                const closeBtn = document.getElementById('closeAboutModal');
+
+                function openModal(cert) {
+                    modalImg.src = cert.img;
+                    modalTitle.innerText = cert.title;
+                    modalDesc.innerText = cert.fullDesc || cert.desc;
+                    modal.style.display = 'flex';
+                }
+
+                // attach event listeners to dynamically created buttons
+                document.querySelectorAll('.view-about-cert').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const idx = parseInt(btn.getAttribute('data-idx'));
+                        if (!isNaN(idx) && certs[idx]) openModal(certs[idx]);
+                    });
+                });
+
+                // close modal events
+                if (closeBtn) {
+                    closeBtn.onclick = () => modal.style.display = 'none';
+                }
+                window.onclick = (e) => {
+                    if (e.target === modal) modal.style.display = 'none';
+                };
+            }
+
+            // Additional resume-linked improvement: Minor style & sync with existing interactive cursor (already in script.js)
+            // ensure that the "duplicate contact" is resolved: only one contact block exists (inside bio-text)
+            // also enrich stats with real info
+        })();
+    </script>
+    <!-- ensure any residual empty <p> from old about is gone, and 2x contact removed -->
 </body>
 </html>
