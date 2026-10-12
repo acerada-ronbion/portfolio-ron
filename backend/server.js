@@ -26,8 +26,13 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-mongoose
 
+if (!process.env.MONGO_URI) {
+    console.error("Missing MONGO_URI in environment variables.");
+    process.exit(1);
+}
+
+mongoose
     .connect(process.env.MONGO_URI)
     .then(() => {
         console.log("MongoDB Connected");
@@ -37,5 +42,6 @@ mongoose
         });
     })
     .catch((err) => {
-        console.error("MongoDB connection error:", err);
+        console.error("MongoDB connection error:", err.message || err);
+        process.exit(1);
     });
