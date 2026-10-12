@@ -1,5 +1,9 @@
 // Particle system with mouse repulsion and particle-particle collision
-(function() {
+(function () {
+    const API_BASE_URL = window.location.hostname === 'localhost'
+        ? 'http://localhost:5000'
+        : 'https://portfolio-ron-nzap.onrender.com';
+
     const canvas = document.createElement('canvas');
     canvas.id = 'particleCanvas';
     document.body.insertBefore(canvas, document.body.firstChild);
@@ -11,7 +15,7 @@
     const REPULSION_FORCE = 0.8;
     const REPULSION_RADIUS = 120;
     const COLLISION_DAMP = 0.9;
-    
+
     class Particle {
         constructor() {
             this.x = Math.random() * width;
@@ -22,7 +26,7 @@
             this.alpha = Math.random() * 0.5 + 0.3;
             this.color = Math.random() > 0.6 ? '#3b82f6' : '#8b5cf6';
         }
-        
+
         update() {
             if (mouseX !== null && mouseY !== null) {
                 const dx = this.x - mouseX;
@@ -57,7 +61,7 @@
             if (Math.abs(this.vx) > maxSpeed) this.vx *= 0.98;
             if (Math.abs(this.vy) > maxSpeed) this.vy *= 0.98;
         }
-        
+
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -67,7 +71,7 @@
             ctx.fill();
         }
     }
-    
+
     function handleCollisions() {
         for (let i = 0; i < particles.length; i++) {
             for (let j = i + 1; j < particles.length; j++) {
@@ -101,14 +105,14 @@
             }
         }
     }
-    
+
     function initParticles() {
         particles = [];
         for (let i = 0; i < PARTICLE_COUNT; i++) {
             particles.push(new Particle());
         }
     }
-    
+
     function drawLines() {
         for (let i = 0; i < particles.length; i++) {
             for (let j = i + 1; j < particles.length; j++) {
@@ -119,14 +123,14 @@
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = `rgba(59, 130, 246, ${0.08 * (1 - dist/100)})`;
+                    ctx.strokeStyle = `rgba(59, 130, 246, ${0.08 * (1 - dist / 100)})`;
                     ctx.lineWidth = 0.8;
                     ctx.stroke();
                 }
             }
         }
     }
-    
+
     function animate() {
         if (!ctx) return;
         ctx.clearRect(0, 0, width, height);
@@ -157,7 +161,7 @@
         }
         requestAnimationFrame(animate);
     }
-    
+
     function resizeCanvas() {
         width = window.innerWidth;
         height = window.innerHeight;
@@ -165,7 +169,7 @@
         canvas.height = height;
         initParticles();
     }
-    
+
     window.addEventListener('resize', resizeCanvas);
     document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
@@ -182,8 +186,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const requestJson = async (endpoint) => {
-        const response = await fetch(endpoint);
-        if (!response.ok) throw new Error(`${endpoint} returned ${response.status}`);
+        const url = endpoint.startsWith('http') ? endpoint : `${API_BASE_URL}${endpoint}`;
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`${url} returned ${response.status}`);
         return response.json();
     };
     const safeHttpUrl = (value) => {
