@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects | Ronbion Acerada</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="glass-nav"><div class="nav-container"><a href="index.html" class="logo">RA<span class="dot">.</span></a><div class="nav-links"><a href="index.html">Home</a><a href="gallery.html">Project</a><a href="experience.html">Work</a><a href="documents.html">Resume</a><a href="about.html">Bio</a></div></div></nav>
+    <main>
+        <section class="section reveal-on-scroll">
+            <div class="section-header"><h2><span class="accent-gradient">📌 Featured Projects</span></h2><div class="header-line"></div></div>
+            <div class="grid two-col" id="projectsGrid"></div>
+        </section>
+    </main>
+    <div id="projectModal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header"><h3 id="modalTitle">Project</h3><span class="close-modal">&times;</span></div>
+            <div class="modal-body">
+                <div class="modal-image"><img id="modalImage" src=""></div>
+                <div style="margin-top:15px; display:flex; justify-content:center; gap:15px;">
+                    <button id="prevBtn" class="btn small">❮ Prev</button>
+                    <button id="nextBtn" class="btn small">Next ❯</button>
+                </div>
+                <div id="modalDesc" style="margin-top:1rem; color:var(--text-secondary);"></div>
+            </div>
+        </div>
+    </div>
+    <footer><p>© 2025 Ronbion D. Acerada · <a href="mailto:ronbion.11@gmail.com">ronbion.11@gmail.com</a></p></footer>
+    <script src="script.js"></script>
+    <script>
+        const projects = [
+            { title:"Robotic Dispensing System", desc:"AI-driven system using Raspberry Pi & HuskyLens with Lidar Sensor — object recognition + precise dispensing.", img:"project1.jpg", images:["project1.jpg","project1-2.jpg"] },
+            { title:"Arduino Expansion Board", desc:"Custom multi-sensor PCB shield for rapid prototyping — Proteus Design.", img:"project2.jpg", images:["project2.jpg","project2-1.jpg"] },
+            { title:"FPV 5inch Drone", desc:"Custom Build and Configuration.", img:"project3.jpg", images:["project3.jpg","project3-1.jpg"] }
+        ];
+        const grid = document.getElementById('projectsGrid');
+        projects.forEach((p, idx) => {
+            grid.innerHTML += `<div class="project-card glass-card" data-idx="${idx}"><div class="project-img"><img src="${p.img}" alt="${p.title}"></div><div class="project-info"><h3>${p.title}</h3><p>${p.desc.substring(0, 80)}...</p><button class="btn primary small view-project"> View Project</button></div></div>`;
+        });
+        let currentProject = null, currentImageIndex = 0;
+        const modal = document.getElementById('projectModal');
+        const modalImg = document.getElementById('modalImage');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+        document.querySelectorAll('.view-project').forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                currentProject = projects[i];
+                currentImageIndex = 0;
+                modalTitle.innerText = currentProject.title;
+                modalDesc.innerText = currentProject.desc;
+                modalImg.src = currentProject.images[0];
+                modal.style.display = 'flex';
+            });
+        });
+        document.querySelector('.close-modal').onclick = () => modal.style.display = 'none';
+        document.getElementById('prevBtn').onclick = () => { if(currentProject){ currentImageIndex = (currentImageIndex-1+currentProject.images.length)%currentProject.images.length; modalImg.src = currentProject.images[currentImageIndex]; } };
+        document.getElementById('nextBtn').onclick = () => { if(currentProject){ currentImageIndex = (currentImageIndex+1)%currentProject.images.length; modalImg.src = currentProject.images[currentImageIndex]; } };
+        window.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; };
+    </script>
+</body>
+</html>
