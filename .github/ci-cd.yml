@@ -29,3 +29,8 @@ jobs:
     - name: Run Build / Server Validation Check
       working-directory: ./backend
       run: node -e "console.log('Backend build and dependency check passed successfully!')"
+
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: './public'
